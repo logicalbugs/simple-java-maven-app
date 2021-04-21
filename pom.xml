@@ -15,7 +15,7 @@
 	<name>my-app</name>
 	<url>http://maven.apache.org</url>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
@@ -55,7 +55,6 @@
 				<!-- Build an executable JAR -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
-				<version>3.2.0</version>
 				<configuration>
 					<archive>
 						<manifest>
@@ -69,20 +68,19 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
-				<version>3.0.0-M3</version>
 				<executions>
 					<execution>
 						<id>enforce-maven</id>
 						<goals>
 							<goal>enforce</goal>
 						</goals>
-						<!-- <configuration>
+						<configuration>
 							<rules>
 								<requireMavenVersion>
 									<version>[3.5.0,)</version>
 								</requireMavenVersion>
 							</rules>
-						</configuration> -->
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
